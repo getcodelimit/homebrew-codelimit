@@ -167,5 +167,4 @@ class Codelimit < Formula
     virtualenv_create(libexec, "python3")
     virtualenv_install_with_resources
   end
-
 end
