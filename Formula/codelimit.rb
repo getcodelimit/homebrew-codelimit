@@ -3,16 +3,10 @@ class Codelimit < Formula
 
   desc "Your Refactoring Alarm"
   homepage "https://github.com/getcodelimit/codelimit"
-  url "https://files.pythonhosted.org/packages/ef/76/355f386acbba2d578d3a2ff7f3129bd5295f8b5611b036e604ed3600cbee/codelimit-0.4.0.tar.gz"
-  sha256 "4dd32e7e6ba6a344c5c449ecb7b55b8e49e23e45b9876317a0a6092409358c96"
+  url "https://files.pythonhosted.org/packages/71/db/872656169f3a75e923faf89c4ef57ccf7691722422e6d708f6ced6edbde2/codelimit-0.6.0.tar.gz"
+  sha256 "2791dded3c894a44525bcb9d354088626d1627272137b8273513bfb704efbfea"
 
-  bottle do
-    root_url "https://github.com/getcodelimit/homebrew-codelimit/releases/download/codelimit-0.4.0"
-    sha256 cellar: :any_skip_relocation, ventura:      "a3ce4e8c1aa06486bbbbc96cf38587bc801b5f389165029107c9cd17e9b5aca5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "88de5e2a75464a2aa41f5e799dc4488ce24121912686b381112167d8be8ac74b"
-  end
-
-  depends_on "python@3.11"
+  depends_on "python3"
 
   resource "aiohttp" do
     url "https://files.pythonhosted.org/packages/d6/12/6fc7c7dcc84e263940e87cbafca17c1ef28f39dae6c0b10f51e4ccc764ee/aiohttp-3.8.5.tar.gz"
@@ -45,8 +39,8 @@ class Codelimit < Formula
   end
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/72/bd/fedc277e7351917b6c4e0ac751853a97af261278a4c7808babafa8ef2120/click-8.1.6.tar.gz"
-    sha256 "48ee849951919527a045bfe3bf7baa8a959c423134e1a5b98c05c20ba75a1cbd"
+    url "https://files.pythonhosted.org/packages/96/d3/f04c7bfcf5c1862a2a5b845c6b2b360488cf47af55dfa79c98f6a6bf98b5/click-8.1.7.tar.gz"
+    sha256 "ca9853ad459e787e2192211578cc907e7594e294c7ccc834310722b41b9ca6de"
   end
 
   resource "colorama" do
@@ -170,6 +164,8 @@ class Codelimit < Formula
   end
 
   def install
+    virtualenv_create(libexec, "python3")
     virtualenv_install_with_resources
   end
+
 end
