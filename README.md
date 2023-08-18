@@ -1,4 +1,4 @@
-# Getcodelimit Codelimit
+# Homebrew Codelimit
 
 ## How do I install these formulae?
 
