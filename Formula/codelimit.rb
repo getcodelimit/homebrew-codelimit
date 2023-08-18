@@ -6,6 +6,12 @@ class Codelimit < Formula
   url "https://files.pythonhosted.org/packages/71/db/872656169f3a75e923faf89c4ef57ccf7691722422e6d708f6ced6edbde2/codelimit-0.6.0.tar.gz"
   sha256 "2791dded3c894a44525bcb9d354088626d1627272137b8273513bfb704efbfea"
 
+  bottle do
+    root_url "https://github.com/getcodelimit/homebrew-codelimit/releases/download/codelimit-0.6.0"
+    sha256 cellar: :any_skip_relocation, ventura:      "c7cfc66afff1c3aa8c944f0bd574563a5c328bf371384fb2f0659d68dce661c4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "adf7735830c54a057bd4f0b6db0d9f02b99eb6ec928a9efb86cb8805e0ed4920"
+  end
+
   depends_on "python3"
 
   resource "aiohttp" do
